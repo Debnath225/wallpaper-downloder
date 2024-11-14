@@ -94,7 +94,7 @@ img{
 }
 img:hover{
     filter: drop-shadow(8px 6px 9px black);
-    flex-grow:6;
+    flex-grow:4;
 }
 #showColor{
     outline: none;
@@ -117,7 +117,7 @@ filter: drop-shadow(3px 4px 4px black);
     row-gap: 50px;
     column-gap: 30px;
     width: 100%;
-    height: fit-content;
+    height: auto;
     align-self: center;
     gap: space-evenly;
 }
