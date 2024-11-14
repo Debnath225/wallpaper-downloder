@@ -59,7 +59,7 @@ p:hover{
     font-size: 48px;
 }
 .container{
-    height:auto;
+    height:fit-device;
     width: 90%;
     margin-left:5%;
     margin-right: 5%;
