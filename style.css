@@ -56,8 +56,8 @@ p:hover{
 .container{
     display:flex;
     justify-content:center;
-    height:auto;
-    width: device-width;
+    height:100%;
+    width: 100%;
     margin-left:5%;
     margin-right: 5%;
     padding: 2px;
@@ -74,12 +74,12 @@ filter: drop-shadow( 8px 9px 11px black);
 .child{
     border-radius: 18px;
     height: auto;
-    width: device-width;
+    width: auto;
     padding: 12px;
     margin: 10px;
 }
 img{
-    height: 310px;
+    height: 110px;
     border-radius: 12px;
     filter: grayscale(100%);
     border: 3.5px solid black;
@@ -87,7 +87,7 @@ img{
 }
 img:hover{
     filter: drop-shadow(8px 6px 9px black);
-    height:325px;
+    height:195px;
 }
 #showColor{
     outline: none;
@@ -106,8 +106,8 @@ filter: drop-shadow(3px 4px 7px black);
 }
 .imagesContanier{
     display: flex;
-    flex-wrap: wrap;
-    flex-direction:column;
+    flex-wrap: nowrap;
+    flex-direction:row;
     row-gap: 50px;
     column-gap: 30px;
     width: auto;
@@ -136,6 +136,7 @@ h4{
 #loder{
 height:100px;
     width:100px;
+    background-color:green;
     border-radious:50%;
     border-top:30px solid gray;
     animation: lod 4s infinite ese-in;
@@ -147,8 +148,8 @@ height:100px;
      height:300px;
     width:100%;
     border:4px solid black;
-    border-radious:15px;
-    filter:box-shadow(4px 4px 8px black);
+    border-radious:80px;
+    filter:drop-shadow(4px 4px 8px black);
     
 }
 
