@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
     <h1><P contenteditable="true">TRY THIS WALLPAPERS</P></h1>
     <div class="container">
         <div class="child">
@@ -36,12 +37,18 @@
            </div>
             <br>
             <br>
-            <button id="downloadBtn" contenteditable="false"><a href="cat image.jpg" download="cat image.jpg" style="text-decoration:none;">CLICK HEAR TO DOWNLOAD</button></a>
+            <button id="downloadBtn" contenteditable="false"><a href="cat image.jpg" download="cat image.jpg" style="text-decoration:none;">CLICK HEAR TO DOWNLOAD</button></a><div id="loder"></div>
             <br>
             <button type="button" id="showColor" contenteditable="false" onclick="removeClass(this)">Click Hear (to see the color images)</button>
             <h4>Choose a photo to upload:</h4><input type="file"  id="inputImg" name="img" accept="image/*" contenteditable="false" required > 
         </div>
     </div>
+    </header>
+    <br>
+    <br>
+    <main>
+        <div id="slider"></div>
+    </main>
     <script src="script.js">
     </script>
 </body>
