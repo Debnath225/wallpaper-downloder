@@ -54,8 +54,10 @@ p:hover{
     font-size: 48px;
 }
 .container{
-    height:100%;
-    width: auto;
+    display:flex;
+    justify-content:center;
+    height:auto;
+    width: device-width;
     margin-left:5%;
     margin-right: 5%;
     padding: 2px;
@@ -63,6 +65,7 @@ p:hover{
     border:5px solid black;
     background:linear-gradient(180deg,blue,black) ;
     cursor: pointer;
+    gap:15px;
 }
 .container:hover{
 filter: drop-shadow( 8px 9px 11px black);
@@ -71,7 +74,7 @@ filter: drop-shadow( 8px 9px 11px black);
 .child{
     border-radius: 18px;
     height: auto;
-    width: auto;
+    width: device-width;
     padding: 12px;
     margin: 10px;
 }
