@@ -116,6 +116,10 @@ img:hover{
 filter: drop-shadow(3px 4px 4px black);
 }
 .imagesContanier{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 50px;
+    column-gap: 30px;
     width: 100%;
     height: fit-content;
     align-self: center;
