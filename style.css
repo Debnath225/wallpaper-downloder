@@ -1,9 +1,6 @@
 body{
     margin: 0px;
     padding: 0px;
-    width:100%;
-    max-height: 9000px;
-    min-height: 2000px;
     background-color:#e2e2e2;
     filter:saturate(1.8);
 }
@@ -59,8 +56,8 @@ p:hover{
     font-size: 48px;
 }
 .container{
-    height:fit-device;
-    width: 90%;
+    height:100%;
+    width: 100%;
     margin-left:5%;
     margin-right: 5%;
     padding: 2px;
@@ -78,18 +75,15 @@ filter: drop-shadow( 8px 9px 11px black);
     
 }
 .child{
-    background-size: cover;
     border-radius: 16px;
-    border-top-right-radius: 20px 10px 10px;
     height: 100%;
     width: 90%;
     padding: 12px;
     margin: 10px;
-    box-shadow: 3.5px 3.5px grey;
 flex-wrap: wrap;
 }
 img{
-    height: 280px;
+    height: 600px;
     border-radius: 12px;
     filter: grayscale(100%);
     border: 3.5px solid black;
@@ -97,7 +91,7 @@ img{
 }
 img:hover{
     filter: drop-shadow(8px 6px 9px black);
-    height:320px;
+    height:800px;
 }
 #showColor{
     outline: none;
