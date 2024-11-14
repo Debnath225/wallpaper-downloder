@@ -73,7 +73,7 @@ p:hover{
     flex-wrap: wrap;
 }
 .container:hover{
-border: 5px solid white;
+border: 5px solid black;
 filter: drop-shadow( 8px 9px 11px black);
 }
 .child{
@@ -96,7 +96,7 @@ img{
 }
 img:hover{
     filter: drop-shadow(8px 6px 9px black);
-    height: 190px;
+    flex-grow:4;
 }
 #showColor{
     outline: none;
