@@ -64,7 +64,6 @@ p:hover{
     margin-right: 5%;
     padding: 2px;
     border-radius:100px;
-    border: 3px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -73,7 +72,6 @@ p:hover{
     flex-wrap: wrap;
 }
 .container:hover{
-background: linear-gradient(to right bottom ,rgba(11, 231, 231, 0.822),rgb(6, 4, 5));
 border: 5px solid white;
 filter: drop-shadow( 8px 9px 11px black);
 }
