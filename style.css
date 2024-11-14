@@ -150,7 +150,10 @@ height:100px;
     border:4px solid black;
     border-radious:80px;
     filter:drop-shadow(4px 4px 8px black);
-    
+    animation:slide 3s infinite ese-in-out;
+}
+@keyfream slide{
+100%{url:https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqUja9RNPTWIQxd15cFVywzhws-aEKizjz1w&s;}
 }
 
 
