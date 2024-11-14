@@ -3,7 +3,7 @@ body{
     padding: 0px;
     max-height: 9000px;
     min-height: 3000px;
-    background: linear-gradient( 90deg ,#54de09ac,rgba(3, 132, 245, 0.937),rgb(255, 0, 60));  
+    background-color:#e2e2e2; 
     filter: blur(.1px); 
     filter:saturate(1.5);
 }
@@ -79,7 +79,6 @@ filter: drop-shadow( 8px 9px 11px black);
 }
 .child{
     background-size: cover;
-    border: 3PX solid white;
     border-radius: 16px;
     border-top-right-radius: 20px 10px 10px;
     height: auto;
