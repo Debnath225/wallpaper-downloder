@@ -147,16 +147,11 @@ h4{
 height:50px;
     width:50px;
     border-radious:50%;
-    border-top:8px solid #e2e2e2;
-    animation:loding 3s infinite;
+    border-top:10px solid #e2e2e2;
+    animation:loding 4s infinite;
 }
 @keyfream loding{
-0%{border-top:8px;}
-20%{border-right:8px;}
-40%{border-bottum:8px;}
-60%{border-left:8px;}
-80%{border-top:8px;}
-100%{border-right:8px;}
+100%{rotate:(360deg);}
 }
 
 
