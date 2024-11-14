@@ -38,6 +38,7 @@ h2{
     justify-content: center;
     align-items: center;
     outline: none;
+    text-dechoration:none;
     border-radius: 12px;
     background: linear-gradient(90deg,#ff8a00,#e52e71,#00c6ff);
     color: white;
@@ -67,7 +68,7 @@ p:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    background:linear-gradient(to right bottom ,rgba(4, 119, 191, 0.885),rgb(215, 12, 12)) ;
+    background:linear-gradient(180deg,blue,black) ;
     cursor: pointer;
     flex-wrap: wrap;
 }
