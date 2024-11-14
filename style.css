@@ -55,7 +55,7 @@ p:hover{
 }
 .container{
     height:100%;
-    width: 100%;
+    width: auto;
     margin-left:5%;
     margin-right: 5%;
     padding: 2px;
@@ -69,15 +69,14 @@ filter: drop-shadow( 8px 9px 11px black);
     
 }
 .child{
-    border-radius: 16px;
-    height: 100%;
-    width: 100%;
+    border-radius: 18px;
+    height: auto;
+    width: auto;
     padding: 12px;
     margin: 10px;
-flex-wrap: wrap;
 }
 img{
-    height: 600px;
+    height: 310px;
     border-radius: 12px;
     filter: grayscale(100%);
     border: 3.5px solid black;
@@ -85,7 +84,7 @@ img{
 }
 img:hover{
     filter: drop-shadow(8px 6px 9px black);
-    height:800px;
+    height:325px;
 }
 #showColor{
     outline: none;
@@ -108,7 +107,7 @@ filter: drop-shadow(3px 4px 7px black);
     flex-direction:column;
     row-gap: 50px;
     column-gap: 30px;
-    width: 100%;
+    width: auto;
     height: auto;
     align-self: center;
     gap: space-evenly;
