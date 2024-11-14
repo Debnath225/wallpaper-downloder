@@ -89,7 +89,7 @@ filter: drop-shadow( 8px 9px 11px black);
 flex-wrap: wrap;
 }
 img{
-    height: 110px;
+    height: 280px;
     border-radius: 12px;
     filter: grayscale(100%);
     border: 3.5px solid black;
@@ -97,7 +97,7 @@ img{
 }
 img:hover{
     filter: drop-shadow(8px 6px 9px black);
-    height:250px;
+    height:320px;
 }
 #showColor{
     outline: none;
