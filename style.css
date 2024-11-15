@@ -7,9 +7,6 @@ body{
     filter: blur(.1px); 
     filter:saturate(1.5);
 }
-a{
-    text-dechoration:none;
-}
 h1{
     display: flex;
     justify-content: center;
