@@ -123,7 +123,7 @@ filter: drop-shadow(3px 4px 4px black);
     align-self: center;
     gap: space-evenly;
 }
-#inputImg{
+#image_input{
     outline: none;
     border-radius: 18px;
     background: linear-gradient(90deg,#ff8a00,#e52e71,#00c6ff);
@@ -140,4 +140,12 @@ h4{
     font-size: 30px;
     font-family:arial,'san-sarif';
     color: white;
+}
+#display_image{
+height:211px;
+    width:375px;
+    border:2px solid black;
+    border-radious:7px;
+    background-position:center;
+    background-size:cover;
 }
