@@ -8,6 +8,6 @@ reader.addEventListener("load", () => {
   document.quearySelector("#display_image").style.backgroundImage = `url(${upload_image})`
 
 });
-  reader.readAsDataURL(this.files[0])
+  reader.readAsDataURL(this.files[0]);
 
 })
