@@ -1,8 +1,9 @@
 body{
     margin: 0px;
     padding: 0px;
-    max-height: 9000px;
-    min-height: 3000px;
+    max-height: 100%;
+    min-height: 100%;
+    aspect-ratio:16/9;
     background-color:#e2e2e2; 
     filter: blur(.1px); 
     filter:saturate(1.5);
@@ -59,7 +60,7 @@ p:hover{
 }
 .container{
     height:auto;
-    width: 90%;
+    width: 100%;
     margin-left:5%;
     margin-right: 5%;
     padding: 2px;
@@ -144,5 +145,4 @@ height:211px;
     border:2px solid black;
     border-radious:10px;
     background-position:center;
-    background-size:cover;
 }
