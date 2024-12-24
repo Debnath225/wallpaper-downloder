@@ -7,6 +7,7 @@ body{
     background-color:#e2e2e2; 
     filter: blur(.1px); 
     filter:saturate(1.5);
+    overflow: scroll;
 }
 html{
     scroll-behavior: smooth;
@@ -98,9 +99,11 @@ img{
     filter: grayscale(100%);
     border: 2px solid black;
     overflow: scroll;
-    
+    transition: width 2s, height 2s;
 }
 img:hover{
+    width:250px;
+    higth:250px;
     filter: drop-shadow(8px 6px 9px black);
 }
 #showColor{
