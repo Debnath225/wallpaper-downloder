@@ -95,6 +95,7 @@ flex-wrap: wrap;
 img{
     aspect-ratio:16/9;
     height: 180px;
+    width:300px;
     border-radius: 12px;
     filter: grayscale(100%);
     border: 2px solid black;
@@ -103,8 +104,8 @@ img{
     z-index:1;
 }
 img:hover{
-    width:350px;
-    higth:350px;
+    width:fit-content;
+    higth:fit-content;
     z-index:5000;
     filter: drop-shadow(8px 6px 9px black);
 }
