@@ -46,7 +46,7 @@ h4{
     font-size: 25px;
     font-weight: 200;
     height: 36px;
-    width: auto;
+    width: 120px;
     cursor: pointer;
 }
 #downloadBtn:hover{
@@ -62,8 +62,6 @@ p:hover{
     position:fixed;
     height:auto;
     width: 100%;
-    margin-left:5%;
-    margin-right: 5%;
     padding: 2px;
     border-radius:50px;
     border: 3px solid black;
@@ -110,7 +108,7 @@ img:hover{
     font-size: 25px;
     font-weight: 200;
     height: 36px;
-    width: auto;
+    width: 120px;
     cursor: pointer;
 }
 #showColor:hover{
@@ -131,7 +129,7 @@ filter: drop-shadow(3px 4px 4px black);
     font-size: 27px;
     font-weight: 450;
     height: 36px;
-    width: auto;
+    width: 120px;
     cursor: pointer;
 }
 h4{
