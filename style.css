@@ -102,8 +102,8 @@ img{
     transition: width 2s, height 2s;
 }
 img:hover{
-    width:250px;
-    higth:250px;
+    width:350px;
+    higth:350px;
     filter: drop-shadow(8px 6px 9px black);
 }
 #showColor{
@@ -125,6 +125,7 @@ filter: drop-shadow(3px 4px 4px black);
     width: 100%;
     height: fit-content;
     align-self: center;
+    gap:6px;
     justify-content:space-evenly;
 }
 #image_input{
