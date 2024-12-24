@@ -100,10 +100,12 @@ img{
     border: 2px solid black;
     overflow: scroll;
     transition: width 2s, height 2s;
+    z-index:1;
 }
 img:hover{
     width:350px;
     higth:350px;
+    z-index:5000;
     filter: drop-shadow(8px 6px 9px black);
 }
 #showColor{
@@ -124,8 +126,6 @@ filter: drop-shadow(3px 4px 4px black);
 .imagesContanier{
     width: 100%;
     height: fit-content;
-    padding-left:100px;
-    gap:6px;
     justify-content:space-around;
 }
 #image_input{
