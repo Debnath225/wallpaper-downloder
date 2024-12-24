@@ -8,6 +8,8 @@ body{
     filter: blur(.1px); 
     filter:saturate(1.5);
 }
+html{
+    scroll-behavior: smooth;
 h3{
     display: flex;
     justify-content: center;
@@ -46,7 +48,7 @@ h4{
     font-size: 25px;
     font-weight: 200;
     height: 36px;
-    width: 120px;
+    width: auto;
     cursor: pointer;
 }
 #downloadBtn:hover{
@@ -108,7 +110,7 @@ img:hover{
     font-size: 25px;
     font-weight: 200;
     height: 36px;
-    width: 120px;
+    width: auto;
     cursor: pointer;
 }
 #showColor:hover{
@@ -118,7 +120,7 @@ filter: drop-shadow(3px 4px 4px black);
     width: 100%;
     height: fit-content;
     align-self: center;
-    gap: space-evenly;
+    justify-content:space-evenly;
 }
 #image_input{
     outline: none;
@@ -129,7 +131,7 @@ filter: drop-shadow(3px 4px 4px black);
     font-size: 27px;
     font-weight: 450;
     height: 36px;
-    width: 120px;
+    width: auto;
     cursor: pointer;
 }
 h4{
