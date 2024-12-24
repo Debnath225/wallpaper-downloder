@@ -18,8 +18,8 @@ function clickCounter() {
     } else {
       sessionStorage.clickcount = 1;
     }
-    document.getElementById("result").innerHTML = "You have like the photo " + sessionStorage.clickcount + " time(s) in this session.";
+    document.getElementByClass("result").innerHTML = "You have like the photo " + sessionStorage.clickcount + " time(s) in this session.";
   } else {
-    document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+    document.getElementByClass("result").innerHTML = "Sorry, your browser does not support web storage...";
   }
 }
