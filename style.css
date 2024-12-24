@@ -93,7 +93,6 @@ filter: drop-shadow( 8px 9px 11px black);
 flex-wrap: wrap;
 }
 img{
-    padding-left:300px;
     aspect-ratio:16/9;
     height: 110px;
     border-radius: 12px;
@@ -125,7 +124,7 @@ filter: drop-shadow(3px 4px 4px black);
 .imagesContanier{
     width: 100%;
     height: fit-content;
-    align-self: center;
+    padding-left:300px;
     gap:6px;
     justify-content:space-evenly;
 }
