@@ -10,6 +10,7 @@ body{
 }
 html{
     scroll-behavior: smooth;
+}
 h3{
     display: flex;
     justify-content: center;
@@ -91,6 +92,7 @@ filter: drop-shadow( 8px 9px 11px black);
 flex-wrap: wrap;
 }
 img{
+    aspect-ratio:16/9;
     height: 110px;
     border-radius: 12px;
     filter: grayscale(100%);
