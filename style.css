@@ -94,7 +94,7 @@ flex-wrap: wrap;
 }
 img{
     aspect-ratio:16/9;
-    height: 110px;
+    height: 180px;
     border-radius: 12px;
     filter: grayscale(100%);
     border: 2px solid black;
@@ -124,9 +124,9 @@ filter: drop-shadow(3px 4px 4px black);
 .imagesContanier{
     width: 100%;
     height: fit-content;
-    padding-left:180px;
+    padding-left:100px;
     gap:6px;
-    justify-content:space-evenly;
+    justify-content:space-around;
 }
 #image_input{
     outline: none;
