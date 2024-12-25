@@ -92,7 +92,7 @@ filter: drop-shadow( 8px 9px 11px black);
 flex-wrap: wrap;
 }
 img{
-    height: 350px;
+    height: 370px;
     width:350px;
     column-gap:10px;
     border-radius: 12px;
@@ -127,9 +127,10 @@ filter: drop-shadow(3px 4px 4px black);
     width: 100%;
     height: auto;
     display:flex;
-    justify-content:center;
+    justify-content:space-around;
     align-item:center;
     flex-direction: column;
+    
 }
 #image_input{
     outline: none;
