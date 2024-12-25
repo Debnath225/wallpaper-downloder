@@ -3,7 +3,6 @@ body{
     padding: 0px;
     height: 100%;
     width:100%;
-    aspect-ratio:16/9;
     background-color:#e2e2e2; 
     filter: blur(.1px); 
     filter:saturate(1.5);
@@ -127,7 +126,10 @@ filter: drop-shadow(3px 4px 4px black);
 .imagesContanier{
     width: 100%;
     height: fit-content;
+    display:flex;
     justify-content:space-around;
+    align-item:center;
+    flex-direction: column;
 }
 #image_input{
     outline: none;
