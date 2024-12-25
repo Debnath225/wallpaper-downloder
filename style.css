@@ -92,8 +92,8 @@ filter: drop-shadow( 8px 9px 11px black);
 flex-wrap: wrap;
 }
 img{
-    height: 300px;
-    width:300px;
+    height: 350px;
+    width:350px;
     column-gap:10px;
     border-radius: 12px;
     filter: grayscale(100%);
@@ -125,7 +125,7 @@ filter: drop-shadow(3px 4px 4px black);
 }
 .imagesContanier{
     width: 100%;
-    height: fit-content;
+    height: auto;
     display:flex;
     justify-content:center;
     align-item:center;
