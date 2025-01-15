@@ -11,7 +11,7 @@ function drag(event) {
 
 function drop(event) {
   event.preventDefault();
-  let data = event.dataTransfer.getData("text/plain");
+  let data = event.dataTransfer.getData("text/plain",event.CatDrag.id);
   event.display_image.appendChild(document.getElementById(data));
 }
 function clickCounter() {
