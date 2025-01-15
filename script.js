@@ -1,6 +1,12 @@
 const display_image =document.getElementById("display_image");
 const CatDrag =document.getElementById("CatDrag");
-const image_input‎=document.getElementById("image_input‎");
+const image_input‎=document.getElementById("image_input‎").files[0];
+
+let formData = new FormData();
+
+formData.append('image_input', image_input);
+fetch('/upload/image', {method: "POST", body: formData});
+
 
 const getimg=image_input‎.value;
 display_image.innerHTML=image_input.dataTransfer.getData(getimg);
