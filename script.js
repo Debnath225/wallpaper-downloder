@@ -1,5 +1,6 @@
 const display_image =document.getElementById("display_image");
-const CatDrag =document.getElementById=("CatDrag");
+const CatDrag =document.getElementById("CatDrag");
+const image_input‎=document.getElementById("image_input‎");
 function allowDrop(event) {
   event.preventDefault();
 }
@@ -10,7 +11,7 @@ function drag(event) {
 
 function drop(event) {
   event.preventDefault();
-  let data = event.dataTransfer.getData("text");
+  let data = event.dataTransfer.getData("text/plain");
   event.display_image.appendChild(document.getElementById(data));
 }
 function clickCounter() {
