@@ -1,3 +1,4 @@
+const display_image=document.getElementById("display_image");
 function allowDrop(event) {
   event.preventDefault();
 }
@@ -9,7 +10,7 @@ function drag(event) {
 function drop(event) {
   event.preventDefault();
   let data = event.dataTransfer.getData("text");
-  event.target.appendChild(document.getElementById(data));
+  event.display_image.appendChild(document.getElementById(data));
 }
 function clickCounter() {
   if (typeof(Storage) !== "undefined") {
