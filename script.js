@@ -1,10 +1,11 @@
 const display_image=document.getElementById("display_image");
+const CatDrag=document.getElementById=("CatDrag");
 function allowDrop(event) {
   event.preventDefault();
 }
 
 function drag(event) {
-  event.dataTransfer.setData("text", event.target.id);
+  event.dataTransfer.setData("text", event.CatDrag.id);
 }
 
 function drop(event) {
