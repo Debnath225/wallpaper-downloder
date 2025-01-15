@@ -1,5 +1,5 @@
-const display_image=document.getElementById("display_image");
-const CatDrag=document.getElementById=("CatDrag");
+const display_image =document.getElementById("display_image");
+const CatDrag =document.getElementById=("CatDrag");
 function allowDrop(event) {
   event.preventDefault();
 }
