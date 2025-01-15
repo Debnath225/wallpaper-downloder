@@ -1,6 +1,10 @@
 const display_image =document.getElementById("display_image");
 const CatDrag =document.getElementById("CatDrag");
 const image_input‎=document.getElementById("image_input‎");
+
+const getimg=image_input‎.value;
+display_image.innerHTML=image_input.dataTransfer.getData(getimg);
+
 function allowDrop(event) {
   event.preventDefault();
 }
