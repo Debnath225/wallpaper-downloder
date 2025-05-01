@@ -7,7 +7,23 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h3><P contenteditable="true">TRY THIS WALLPAPERS</P></h3>
+    <h3><P>TRY THIS WALLPAPERS</P></h3>
+   <!-- new code !-->
+    
+    <div class="gallery">
+        <!-- Image Card Example -->
+        <div class="card">
+            <img src="cat image.jpg" alt="Cat" class="image">
+            <div class="actions">
+                 <button class="like-btn" data-image-id="cat-image" onclick="handleLike(this, 'cat-image')">Like</button>                <button class="share-btn" onclick="handleShare('cat-image.jpg')">Share</button>
+                <a href="cat-image.jpg" download class="download-btn">Download</a>
+            </div>
+        </div>
+        <!-- Repeat cards for other images -->
+    </div>
+
+<!-- end code !-->
+    
     <div class="container">
            
             <h4 contenteditable="true">----: CLICK ON THE PHOTO'S:----</h4>
