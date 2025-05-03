@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     // Fetching image data from a JSON file
     async function fetchImageData() {
         try {
-            const response = await fetch('data/images.json'); // Adjust the path if needed
+            const response = await fetch('Image data.json'); // Adjust the path if needed
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
