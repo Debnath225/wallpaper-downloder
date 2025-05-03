@@ -1,120 +1,71 @@
-/* General Reset and Body Styling */
+/* General Reset */
 body {
     margin: 0;
     padding: 0;
-    height: 100%;
-    width: 100%;
-    background-color: #f5f5f5; 
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #333;
-    overflow: auto;
-}
-
-/* Smooth scrolling for better UX */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Header Styling */
-h3, h4 {
-    display: flex;
-    justify-content: center;
-    font-family: 'Segoe UI', sans-serif;
-    color: #222;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-    margin: 10px 0;
-}
-
-h3:hover, h4:hover {
-    text-shadow: 2px 2px 10px #ff5722;
-}
-
-/* Button Styling */
-#downloadBtn {
-    display: inline-block;
-    outline: none;
-    border-radius: 12px;
-    background: linear-gradient(90deg, #ff8a00, #e52e71, #00c6ff);
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    height: 40px;
-    width: auto;
-    padding: 0 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     text-align: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    margin: 10px 0;
 }
 
-#downloadBtn:hover {
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-    transform: translateY(-2px);
-}
-
-/* Paragraph Styling */
-p {
-    font-size: 18px;
-    line-height: 1.6;
-    margin: 10px 20px;
-    color: #555;
-    transition: font-size 0.2s ease;
-}
-
-p:hover {
-    font-size: 20px;
-}
-
-/* Container Styling */
-.container {
-    position: relative;
-    width: 100%;
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 10px;
-    border-radius: 10px;
-    border: 2px solid #ddd;
-    background: #fff;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    transition: all 0.3s ease;
-}
-
-.container:hover {
-    border: 2px solid #bbb;
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* Child Element Styling */
-.child {
-    background-size: cover;
-    border: 2px solid #eee;
-    border-radius: 10px;
-    height: auto;
-    width: 90%;
+/* Gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
     padding: 20px;
-    margin: 10px;
-    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
 }
 
-.child:hover {
-    border: 2px solid #ccc;
-    box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.2);
+/* Card */
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.2s;
 }
 
-/* Image Styling */
-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-img:hover {
+.card:hover {
     transform: scale(1.05);
+}
+
+/* Image */
+.image {
+    width: 100%;
+    height: auto;
+}
+
+/* Actions */
+.actions {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+button, .download-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.like-btn {
+    background-color: #ff7675;
+    color: white;
+}
+
+.share-btn {
+    background-color: #74b9ff;
+    color: white;
+}
+
+.download-btn {
+    background-color: #55efc4;
+    color: white;
+    text-decoration: none;
+}
+
+button:hover, .download-btn:hover {
+    opacity: 0.9;
 }
