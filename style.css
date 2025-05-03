@@ -1,71 +1,85 @@
 /* General Reset */
-body {
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    text-align: center;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 0 20px;
 }
 
-/* Gallery */
-.gallery {
+header {
+    background-color: #0073e6;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+.image-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
-    padding: 20px;
+    margin-bottom: 40px;
 }
 
-/* Card */
-.card {
-    background-color: white;
+.image-card {
+    background: white;
+    border: 1px solid #ddd;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
-    transition: transform 0.2s;
-}
-
-.card:hover {
-    transform: scale(1.05);
-}
-
-/* Image */
-.image {
-    width: 100%;
-    height: auto;
-}
-
-/* Actions */
-.actions {
-    display: flex;
-    justify-content: space-around;
     padding: 10px;
 }
 
-button, .download-btn {
-    padding: 10px 15px;
+.image-card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.image-card h3 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.button-container button {
+    background-color: #0073e6;
+    color: white;
     border: none;
+    padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 1rem;
+    transition: background 0.3s;
 }
 
-.like-btn {
-    background-color: #ff7675;
+.button-container button:hover {
+    background-color: #005bb5;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 0;
+    background-color: #0073e6;
     color: white;
-}
-
-.share-btn {
-    background-color: #74b9ff;
-    color: white;
-}
-
-.download-btn {
-    background-color: #55efc4;
-    color: white;
-    text-decoration: none;
-}
-
-button:hover, .download-btn:hover {
-    opacity: 0.9;
 }
