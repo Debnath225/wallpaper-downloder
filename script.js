@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             const imgElement = document.createElement('img');
             imgElement.src = image.url;
+            imgElement.loding = image.lazy;
             imgElement.alt = image.title;
             imgElement.className = 'image';
 
