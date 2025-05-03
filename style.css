@@ -83,3 +83,6 @@ footer {
     background-color: #0073e6;
     color: white;
 }
+.image{
+    aspect-ratio:16/9;
+}
