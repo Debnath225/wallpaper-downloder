@@ -1,87 +1,78 @@
-const display_image =document.getElementById("display_image");
-const CatDrag =document.getElementById("CatDrag");
-const image_input‎=document.getElementById("image_input‎").files[0];
+document.addEventListener("DOMContentLoaded", async () => {
+    const imageContainer = document.getElementById('image-container');
 
-let formData = new FormData();
-
-formData.append('image_input', image_input);
-fetch('/upload/image', {method: "POST", body: formData});
-
-
-const getimg=image_input‎.value;
-display_image.innerHTML=image_input.dataTransfer.getData(getimg);
-
-function allowDrop(event) {
-  event.preventDefault();
-}
-
-function drag(event) {
-  event.dataTransfer.setData("text/plain", event.CatDrag.id);
-}
-
-function drop(event) {
-  event.preventDefault();
-  let data = event.dataTransfer.getData("text/plain",event.CatDrag.id);
-  event.display_image.appendChild(document.getElementById(data));
-}
-function clickCounter() {
-  if (typeof(Storage) !== "undefined") {
-    if (sessionStorage.clickcount) {
-      sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
-    } else {
-      sessionStorage.clickcount = 1;
+    // Fetching image data from a JSON file
+    async function fetchImageData() {
+        try {
+            const response = await fetch('data/images.json'); // Adjust the path if needed
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            const data = await response.json();
+            return data.images; // Assuming the JSON structure has an 'images' array
+        } catch (error) {
+            console.error("Error fetching image data:", error);
+            return [];
+        }
     }
-    document.getElementByClassName("result").innerHTML = "You have like the photo " + sessionStorage.clickcount + " time(s) in this session.";
-  } else {
-    document.getElementByClassName("result").innerHTML = "Sorry, your browser does not support web storage...";
-  }
-}
 
+    // Rendering images on the page
+    function renderImages(images) {
+        imageContainer.innerHTML = ''; // Clear existing images
 
-//like share and download handling 
-// Handle Like Button
-function handleLike(button, imageId) {
-    // Retrieve current like count from localStorage
-    let likeData = JSON.parse(localStorage.getItem('likes')) || {};
-    let count = likeData[imageId] || 0;
+        images.forEach(image => {
+            const imageCard = document.createElement('div');
+            imageCard.className = 'image-card';
 
-    // Increment the like count
-    count++;
-    likeData[imageId] = count;
+            const imgElement = document.createElement('img');
+            imgElement.src = image.url;
+            imgElement.alt = image.title;
+            imgElement.className = 'image';
 
-    // Save the updated like data to localStorage
-    localStorage.setItem('likes', JSON.stringify(likeData));
+            const titleElement = document.createElement('h3');
+            titleElement.textContent = image.title;
 
-    // Update the button text to reflect the new count
-    button.innerText = `Like (${count})`;
-}
+            const buttonContainer = document.createElement('div');
+            buttonContainer.className = 'button-container';
 
-// Handle Share Button
-function handleShare(imageUrl) {
-    if (navigator.share) {
-        navigator.share({
-            title: 'Check out this wallpaper!',
-            text: 'Found this amazing wallpaper.',
-            url: imageUrl,
-        })
-        .then(() => console.log('Shared successfully'))
-        .catch((error) => console.error('Error sharing:', error));
-    } else {
-        alert('Sharing is not supported in this browser.');
+            // Share Button
+            const shareButton = document.createElement('button');
+            shareButton.textContent = 'Share';
+            shareButton.addEventListener('click', () => {
+                if (navigator.share) {
+                    navigator.share({
+                        title: 'Check out this image!',
+                        text: image.title,
+                        url: image.url,
+                    }).then(() => console.log('Shared successfully'))
+                      .catch(error => console.error('Error sharing:', error));
+                } else {
+                    alert('Web Share API is not supported in your browser.');
+                }
+            });
+
+            // Download Button
+            const downloadButton = document.createElement('button');
+            downloadButton.textContent = 'Download';
+            downloadButton.addEventListener('click', () => {
+                const link = document.createElement('a');
+                link.href = image.url;
+                link.download = image.title || 'image';
+                link.click();
+            });
+
+            buttonContainer.appendChild(shareButton);
+            buttonContainer.appendChild(downloadButton);
+
+            imageCard.appendChild(imgElement);
+            imageCard.appendChild(titleElement);
+            imageCard.appendChild(buttonContainer);
+
+            imageContainer.appendChild(imageCard);
+        });
     }
-}
 
-// Initialize likes from localStorage on page load
-function initializeLikes() {
-    const likeData = JSON.parse(localStorage.getItem('likes')) || {};
-    const buttons = document.querySelectorAll('.like-btn');
-
-    buttons.forEach((button) => {
-        const imageId = button.dataset.imageId;
-        const count = likeData[imageId] || 0;
-        button.innerText = `Like (${count})`;
-    });
-}
-
-// Call initializeLikes when the page loads
-document.addEventListener('DOMContentLoaded', initializeLikes);
+    // Initialize the app
+    const images = await fetchImageData();
+    renderImages(images);
+});
