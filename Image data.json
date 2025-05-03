@@ -1,5 +1,12 @@
-[
-  
-
-
-]
+{
+    "images": [
+        {
+            "url": "https://example.com/image1.jpg",
+            "title": "Beautiful Sunset"
+        },
+        {
+            "url": "https://example.com/image2.jpg",
+            "title": "Mountain View"
+        }
+    ]
+}
