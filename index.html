@@ -2,25 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.5">
-    <title>Wallpaper Downloader</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Downloader</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h3><P>TRY THIS WALLPAPERS</P></h3>
+    <header>
+        <h1>Image Downloader</h1>
+    </header>
+    <main>
+        <div id="image-container" class="image-container">
+            <!-- Images will be dynamically added here by JavaScript -->
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Image Downloader</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
    <!-- new code !-->
     
-    <div class="gallery">
         <!-- Image Card Example -->
-        <div class="card">
-            <img src="cat image.jpg" alt="Cat" class="image">
-            <div class="actions">
-                 <button class="like-btn" data-image-id="cat-image" onclick="handleLike(this, 'cat-image')">Like</button>                <button class="share-btn" onclick="handleShare('cat-image.jpg')">Share</button>
-                <a href="cat image.jpg" download class="download-btn">Download</a>
-            </div>
-        </div>
-        <!-- Repeat cards for other images -->
-    </div>
 
 <!-- end code !-->
     
