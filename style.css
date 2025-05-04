@@ -99,6 +99,6 @@ footer {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transform: translateY(-11.2vh);
 }
-.like:active{
+.like-button:active{
     scale:1.4;
 }
