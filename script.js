@@ -83,10 +83,12 @@ document.addEventListener("DOMContentLoaded", async () => {
         if (localStorage.getItem("likedImage") === image.title) {
           likeButton.innerHTML = "<i class='fa fa-thumbs-up'></i>";
           likeButton.style.backgroundColor = "blue";
+          likeButton.style.fontSize = "20px";
           likeButton.style.color = "white";
         } else {
           likeButton.innerHTML = "<i class='fa fa-thumbs-up'></i>";
           likeButton.style.backgroundColor = "blue";
+          likeButton.style.fontSize = "20px";
           likeButton.style.color = "white";
           localStorage.setItem("likedImage", image.title);
         }
