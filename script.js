@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       imgElement.src = image.url;
       imgElement.alt = image.title;
       imgElement.className = "image";
+      imgElement.loading = "lazy"; // Lazy loading for performance
       imgElement.onerror = function () {
         imgElement.src =
           "https://png.pngtree.com/png-vector/20210221/ourmid/pngtree-error-404-not-found-neon-effect-png-image_2928214.jpg"; // Placeholder image on error
