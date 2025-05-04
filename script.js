@@ -77,3 +77,50 @@ document.addEventListener("DOMContentLoaded", async () => {
     const images = await fetchImageData();
     renderImages(images);
 });
+//image input handling 
+document.addEventListener("DOMContentLoaded", () => {
+    const uploadInput = document.getElementById("upload-input");
+    const galleryContainer = document.getElementById("gallery-container");
+
+    // Load previously saved images from localStorage
+    function loadImagesFromLocalStorage() {
+        const savedImages = JSON.parse(localStorage.getItem("uploadedImages")) || [];
+        galleryContainer.innerHTML = ""; // Clear existing images
+
+        savedImages.forEach((imageDataUrl) => {
+            const imgElement = document.createElement("img");
+            imgElement.src = imageDataUrl;
+            galleryContainer.appendChild(imgElement);
+        });
+    }
+
+    // Save new images to localStorage
+    function saveImagesToLocalStorage(newImages) {
+        const savedImages = JSON.parse(localStorage.getItem("uploadedImages")) || [];
+        const updatedImages = [...savedImages, ...newImages].slice(0, 5); // Keep only the last 5 images
+        localStorage.setItem("uploadedImages", JSON.stringify(updatedImages));
+        loadImagesFromLocalStorage();
+    }
+
+    // Event listener for file input
+    uploadInput.addEventListener("change", (event) => {
+        const files = Array.from(event.target.files);
+        const imagePromises = files.map((file) => {
+            return new Promise((resolve, reject) => {
+                const reader = new FileReader();
+                reader.onload = () => resolve(reader.result);
+                reader.onerror = () => reject(reader.error);
+                reader.readAsDataURL(file);
+            });
+        });
+
+        Promise.all(imagePromises).then((imageDataUrls) => {
+            saveImagesToLocalStorage(imageDataUrls);
+        }).catch((error) => {
+            console.error("Error reading files:", error);
+        });
+    });
+
+    // Initialize the gallery on page load
+    loadImagesFromLocalStorage();
+});
