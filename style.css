@@ -86,3 +86,16 @@ footer {
 .image{
     aspect-ratio:16/9;
 }
+.next-page-button {
+  float: right;
+  background: #00e62e;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease-in-out;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transform: translateY(-11.2vh);
+}
