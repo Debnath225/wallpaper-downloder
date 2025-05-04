@@ -36,7 +36,12 @@ document.addEventListener("DOMContentLoaded", async () => {
       imgElement.src = image.url;
       imgElement.alt = image.title;
       imgElement.className = "image";
-
+      imgElement.onerror = function () {
+        imgElement.src =
+          "https://png.pngtree.com/png-vector/20210221/ourmid/pngtree-error-404-not-found-neon-effect-png-image_2928214.jpg"; // Placeholder image on error
+        imgElement.alt = "Image not available";
+        titleElement.textContent = "Image not available"; // Update title on error
+      };
       const titleElement = document.createElement("h3");
       titleElement.textContent = image.title;
 
