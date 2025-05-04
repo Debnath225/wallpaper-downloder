@@ -82,6 +82,14 @@ document.addEventListener("DOMContentLoaded", async () => {
       const likeButton = document.createElement("button");
       likeButton.className = "like-button";
       likeButton.textContent = "Like";
+
+      // Check if the image is already liked
+      if (localStorage.getItem("likedImage") === image.title) {
+        likeButton.innerHTML = "<i class='fa fa-thumbs-up'></i>";
+        likeButton.style.backgroundColor = "green";
+        likeButton.style.color = "white";
+      }
+      
       likeButton.addEventListener("click", () => {
         if (localStorage.getItem("likedImage") === image.title) {
           likeButton.innerHTML = "<i class='fa fa-thumbs-up'></i>";
