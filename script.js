@@ -49,12 +49,14 @@ document.addEventListener("DOMContentLoaded", async () => {
       shareButton.textContent = "Share";
       shareButton.addEventListener("click", () => {
         if (navigator.share) {
-          navigator
-            .share({
-              title: "Check out this image!",
-              text: image.title,
-              url: image.url,
-            })
+          navigator.share.whatsapp = function (options) {
+            const { title, text, url } = options;
+            const whatsappUrl = `whatsapp://send?text=${encodeURIComponent(
+              `${title}\n${text}\n${url}`
+            )}`;
+            window.open(whatsappUrl, "_blank");
+          };
+          navigator.share
             .then(() => console.log("Shared successfully"))
             .catch((error) => console.error("Error sharing:", error));
         } else {
@@ -80,7 +82,6 @@ document.addEventListener("DOMContentLoaded", async () => {
       likeButton.addEventListener("click", () => {
         if (localStorage.getItem("likedImage") === image.title) {
           likeButton.innerHTML = "<i class='fa fa-thumbs-up'></i>";
-          likeButton.style.backgroundColor = "green";
           likeButton.style.color = "white";
         } else {
           likeButton.innerHTML = "<i class='fa fa-thumbs-up'></i>";
